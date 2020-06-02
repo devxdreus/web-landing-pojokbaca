@@ -1,0 +1,179 @@
+/* pallete
+#00005c
+#6a097d
+#c060a1
+#ffdcb4
+*/
+
+
+body {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 16px;
+  color: #ddd;
+  position: relative;
+}
+
+nav {
+  z-index: 9999;
+}
+
+.content {
+  background-image: linear-gradient(45deg, #c060a1, #6a097d);
+  z-index: -1;
+  position: relative;
+  /* background-color: #333; */
+}
+
+.background {
+  background-image: url(../img/bg.png);
+  position: absolute;
+  opacity: .2;
+  width: 100%;
+  height: 720px;
+  background-size: cover;
+  background-position: center;
+  margin-top: -74px;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+}
+
+section {
+  /* background-image: linear-gradient(to right, #c060a1, #6a097d); */
+  padding: 50px 0 100px;
+  position: relative;
+}
+
+.shadow1, .shadow2, .shadow3 {
+  background-image: url(../svg/bg-3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  opacity: .2;
+  position: absolute;
+  width: 80%;
+  height: 500px;
+  top: -10%;
+  left: 10%;
+}
+
+.shadow2 {
+  background-image: url(../svg/bg-2.svg);
+  background-position: right; 
+  margin-top: -200px;
+}
+
+.shadow3 {
+  background-image: url(../svg/bg-1.svg);
+  margin-top: -250px;
+}
+
+.svg-1 {
+  opacity: 0;
+  animation: fadein 1.25s 2.6s forwards;
+}
+
+.header, .section-1, .section-2 {
+  position: relative;
+  z-index: 1;
+}
+
+
+.header h2 {
+  color: #fff;
+  font-size: 3em;
+}
+
+.footer {
+  width: 100%;
+  padding: 50px;
+  background-color: #333;
+  color: #ddd;
+  text-align: center;
+}
+
+.footer p {
+  font-size: .9em;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+/* Animations */
+.animate1 {
+  opacity: 0;
+  transform-origin: 0 50%;
+  transform: translateY(50px);
+  animation: popup1 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.animate2 {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: popup2 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes popup1 {
+  0% {
+    opacity: 0;
+  } 30% {
+    letter-spacing: 20px;
+  } 85% {
+    letter-spacing: normal;
+    transform: translateY(50px);
+  } 100% {
+    opacity: 1;
+    letter-spacing: normal;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popup2 {
+  85% {
+    opacity: 0;
+    transform: translateY(-30px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(.9);
+  } 75% {
+    transform: scale(1.05);
+  } 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+/* Responsive Breakpoints */
+@media (max-width: 576px) {
+  .svg {
+    width: 80%;
+  }
+
+  section {
+    text-align: center;
+  }
+}
